@@ -7,7 +7,7 @@ where
     base: I,
 }
 
-fn async_iter<I>(iter: I) -> AsyncIterator<I>
+pub fn async_iter<I>(iter: I) -> AsyncIterator<I>
 where
     I: Iterator,
 {
@@ -17,7 +17,7 @@ where
 }
 
 impl<I:Iterator> AsyncIterator<I>  {
-    async fn async_fold<B, F>(mut self, init: B, mut f: F) -> B
+    pub async fn async_fold<B, F>(mut self, init: B, mut f: F) -> B
     where
         Self: Sized,
         F: FnMut(B, I::Item) -> B,
@@ -25,7 +25,7 @@ impl<I:Iterator> AsyncIterator<I>  {
         let mut res = init;
 
         loop {
-            let i = self.base.by_ref().take(100);
+            let i = self.base.by_ref().take(10_000_000);
             res = i.fold(res, &mut f);
             if let Some(next_one) = self.base.next() {
                 res = f(res, next_one);
