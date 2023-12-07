@@ -1,0 +1,23 @@
+Comparison :
+
+Taille : 1_000_000
+Sequential: Elapsed time: 42ns
+Block size: 1, Elapsed time: 43247541ns
+Block size: 10, Elapsed time: 4204959ns
+Block size: 100, Elapsed time: 431375ns
+Block size: 1_000, Elapsed time: 111750ns
+Block size: 10_000, Elapsed time: 89709ns
+Block size: 100_000, Elapsed time: 93333ns
+Block size: 1_000_000, Elapsed time: 87125ns
+
+Taille : 1_000_000_000
+Block size: 1, Elapsed time: 30968ms
+Block size: 10, Elapsed time: 3645ms
+Block size: 100, Elapsed time: 381ms
+Block size: 1_000, Elapsed time: 110ms
+Block size: 10_000, Elapsed time: 98ms
+Block size: 100_000, Elapsed time: 97ms
+Block size: 1_000_000, Elapsed time: 97ms
+Block size: 10_000_000, Elapsed time: 97ms
+Block size: 100_000_000, Elapsed time: 97ms
+Block size: 1_000_000_000, Elapsed time: 97ms

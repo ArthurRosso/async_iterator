@@ -10,7 +10,7 @@ pub trait AsyncIterator: IntoIterator {
     fn split_at(self, index: usize) -> (Self, Self) where Self: Sized;
     fn size_hint(&self) -> usize where Self: Sized;
 
-    async fn async_fold<B, F>(mut self, init: B, f: F) -> B
+    async fn async_fold<B, F>(mut self, init: B, f: F, block: usize) -> B
     where
         Self: Sized,
         Self::Item : Send,
@@ -21,10 +21,10 @@ pub trait AsyncIterator: IntoIterator {
         let mut res = init;
 
         loop {
-            let (left, right) = self.split_at(1_000_000_000);
-            let start = std::time::Instant::now();
+            let (left, right) = self.split_at(block);
+            // let start = std::time::Instant::now();
             res = left.into_iter().fold(res, f);
-            eprintln!("folding took {:?}", start.elapsed());
+            // eprintln!("folding took {:?}", start.elapsed());
             if right.size_hint() == 0 {
                 return res;
             }
