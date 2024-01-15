@@ -90,7 +90,7 @@ impl<'a, T: 'a> IntoIterator for Iter<'a, T> {
 }
 
 #[async_trait]
-impl<'a, T: 'a + std::marker::Sync> AsyncIterator for Iter<'a, T> {
+impl<'a, T: 'a + Sync> AsyncIterator for Iter<'a, T> {
     type Item = &'a T;
     // si on est un Iter sur une tranche
     // on reprend le vieil algo: on coupe en blocs et chaque bloc est folde avec le folder qu'on a en argument

@@ -27,6 +27,4 @@ async fn main() {
 
     // Check the results
     assert_eq!(async_fold_result, fold_result);
-
-    // let data: Vec<i32> = vec![0; 500_000_000];
 }

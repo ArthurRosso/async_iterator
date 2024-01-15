@@ -24,4 +24,3 @@ rpath = false
 async-trait = "0.1.74"
 rand = "0.8"
 tokio = { version = "1", features = ["full"] }
-plotters = "0.3.5"
