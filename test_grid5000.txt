@@ -1,0 +1,49 @@
+Running test 1 - 1_024 elements
+Fold Sequential: Elapsed time: 272ns
+Fold Async: Elapsed time: 1.397µs
+Map Sequential: Elapsed time: 51ns
+Map Async: Elapsed time: 47ns
+Filter Sequential: Elapsed time: 50ns
+Filter Async: Elapsed time: 46ns
+Collect Sequential: Elapsed time: 12.409µs
+Collect Async: Elapsed time: 19.738µs
+
+Running test 2 - 1_000_000 elements
+Fold Sequential: Elapsed time: 339.467µs
+Fold Async: Elapsed time: 349.733µs
+Map Sequential: Elapsed time: 39ns
+Map Async: Elapsed time: 39ns
+Filter Sequential: Elapsed time: 39ns
+Filter Async: Elapsed time: 38ns
+Collect Sequential: Elapsed time: 4.93924ms
+Collect Async: Elapsed time: 13.297199ms
+
+Running test 3 - 10_000_000 elements
+Fold Sequential: Elapsed time: 5.524997ms
+Fold Async: Elapsed time: 5.521424ms
+Map Sequential: Elapsed time: 43ns
+Map Async: Elapsed time: 39ns
+Filter Sequential: Elapsed time: 41ns
+Filter Async: Elapsed time: 39ns
+Collect Sequential: Elapsed time: 45.618187ms
+Collect Async: Elapsed time: 120.217778ms
+
+Running test 4 - 100_000_000 elements
+Fold Sequential: Elapsed time: 62.405631ms
+Fold Async: Elapsed time: 62.375418ms
+Map Sequential: Elapsed time: 29ns
+Map Async: Elapsed time: 38ns
+Filter Sequential: Elapsed time: 38ns
+Filter Async: Elapsed time: 36ns
+Collect Sequential: Elapsed time: 449.057315ms
+Collect Async: Elapsed time: 1.103243465s
+
+Running test 5 - 1_000_000_000 elements
+Fold Sequential: Elapsed time: 631.837425ms
+Fold Async: Elapsed time: 631.276907ms
+Map Sequential: Elapsed time: 40ns
+Map Async: Elapsed time: 36ns
+Filter Sequential: Elapsed time: 38ns
+Filter Async: Elapsed time: 36ns
+Collect Sequential: Elapsed time: 4.487253724s
+Collect Async: Elapsed time: 10.941268598s
