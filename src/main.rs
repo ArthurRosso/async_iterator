@@ -97,7 +97,7 @@ async fn test1(){
     let async_iter: async_iterator::Iter<'_, i32> = async_iterator::Iter{slice: &data};
     let start = Instant::now();
     // let async_filter_result = async_iter.filter(|&&x| x<0).async_fold(0, |acc, _x| acc+1).await;
-    let async_collect_result = async_iter.collect_vec().await;
+    let async_collect_result: Vec<_> = async_iter.collect_vec().await;
     let elapsed = start.elapsed();
     println!(
         "Collect Async: Elapsed time: {:?}",
@@ -189,7 +189,7 @@ async fn test2(){
     let async_iter: async_iterator::Iter<'_, i32> = async_iterator::Iter{slice: &data};
     let start = Instant::now();
     // let async_filter_result = async_iter.filter(|&&x| x<0).async_fold(0, |acc, _x| acc+1).await;
-    let async_collect_result = async_iter.collect_vec().await;
+    let async_collect_result: Vec<_> = async_iter.collect_vec().await;
     let elapsed = start.elapsed();
     println!(
         "Collect Async: Elapsed time: {:?}",
@@ -282,7 +282,7 @@ async fn test3(){
     let async_iter: async_iterator::Iter<'_, i32> = async_iterator::Iter{slice: &data};
     let start = Instant::now();
     // let async_filter_result = async_iter.filter(|&&x| x<0).async_fold(0, |acc, _x| acc+1).await;
-    let async_collect_result = async_iter.collect_vec().await;
+    let async_collect_result: Vec<_> = async_iter.collect_vec().await;
     let elapsed = start.elapsed();
     println!(
         "Collect Async: Elapsed time: {:?}",
@@ -374,7 +374,7 @@ async fn test4(){
     let async_iter: async_iterator::Iter<'_, i32> = async_iterator::Iter{slice: &data};
     let start = Instant::now();
     // let async_filter_result = async_iter.filter(|&&x| x<0).async_fold(0, |acc, _x| acc+1).await;
-    let async_collect_result = async_iter.collect_vec().await;
+    let async_collect_result: Vec<_> = async_iter.collect_vec().await;
     let elapsed = start.elapsed();
     println!(
         "Collect Async: Elapsed time: {:?}",
@@ -467,7 +467,7 @@ async fn test5(){
     let async_iter: async_iterator::Iter<'_, i32> = async_iterator::Iter{slice: &data};
     let start = Instant::now();
     // let async_filter_result = async_iter.filter(|&&x| x<0).async_fold(0, |acc, _x| acc+1).await;
-    let async_collect_result = async_iter.collect_vec().await;
+    let async_collect_result: Vec<_> = async_iter.collect_vec().await;
     let elapsed = start.elapsed();
     println!(
         "Collect Async: Elapsed time: {:?}",
